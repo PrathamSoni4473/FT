@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Delivery Proof – BuildPay-X</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+  <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="assets/css/app.css"/>
+</head>
+<body>
+  <div id="app">
+    <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="#"><img style=" width: 200px;height: 70px;" src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item ">
+                            <a href="materialSupplier.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Pages</li>
+
+                        
+
+                        <li class="sidebar-item active has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                    <use
+                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#bookmark-fill" />
+                                </svg>
+                                <span>Manage Claims</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="ms-form.html">Submit new claim</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="ms-claims.html">Claim Status</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="ms-noti.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#chat-right-text-fill" />
+                                            </svg>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ms-profile.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#person-circle" />
+                                            </svg>
+                                <span>Profile Settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  ">
+                            <a href="contact.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#file-earmark-diff-fill" />
+                                            </svg>
+                                <span>Contact us</span>
+                            </a>
+                        </li>
+
+                        
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+    <div id="main">
+      <header class="mb-3">
+        <a href="#" class="burger-btn d-block d-xl-none">
+          <i class="bi bi-justify fs-3"></i>
+        </a>
+      </header>
+
+      <div class="page-heading">
+        <h3>Upload Delivery Proof</h3>
+        <p class="text-subtitle text-muted">
+          Please upload GPS-tagged photo(s) or a delivery certificate for your material claim.
+        </p>
+      </div>
+
+      <div class="page-content">
+        <section class="section">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+
+              <!-- Claim Summary Card -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h4>Claim Details</h4>
+                </div>
+                <div class="card-body">
+                  <dl class="row">
+                    <dt class="col-sm-4">Claim ID</dt>
+                    <dd class="col-sm-8">CLM-023</dd>
+
+                    <dt class="col-sm-4">Project</dt>
+                    <dd class="col-sm-8">University Science Block</dd>
+
+                    <dt class="col-sm-4">PO Number</dt>
+                    <dd class="col-sm-8">PO-USB2025</dd>
+
+                    <dt class="col-sm-4">Amount (A$)</dt>
+                    <dd class="col-sm-8">14,300</dd>
+
+                    <dt class="col-sm-4">Delivery Date</dt>
+                    <dd class="col-sm-8">2025-07-15</dd>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- Upload Proof Form -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Proof of Delivery</h4>
+                </div>
+                <div class="card-body">
+                  <form id="proof-form">
+                    
+                    <!-- GPS Coordinates (auto-detected) -->
+                    <div class="mb-3">
+                      <label for="gps-coords" class="form-label">
+                        GPS Coordinates
+                        <i class="bi bi-geo-alt-fill text-secondary"></i>
+                      </label>
+                      <input
+                        type="text"
+                        id="gps-coords"
+                        class="form-control"
+                        placeholder="Fetching your location…"
+                        readonly>
+                      <small class="text-muted">
+                        Allow location access to auto-fill coordinates.
+                      </small>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="mb-4">
+                      <label for="delivery-photos" class="form-label">
+                        Upload Photos / Certificate
+                      </label>
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="delivery-photos"
+                        accept="image/*,application/pdf"
+                        multiple
+                        required>
+                      <small class="text-muted">
+                        You can upload up to 5 files (jpg, png, pdf).
+                      </small>
+                    </div>
+
+                    <!-- Optional Notes -->
+                    <div class="mb-4">
+                      <label for="proof-notes" class="form-label">Notes (optional)</label>
+                      <textarea
+                        id="proof-notes"
+                        class="form-control"
+                        rows="3"
+                        placeholder="Any additional info…"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-end">
+                      <button type="submit" class="btn btn-primary">
+                        Submit Proof
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Example: auto-fill GPS coords if browser allows
+    navigator.geolocation.getCurrentPosition(pos => {
+      document.getElementById('gps-coords').value =
+        pos.coords.latitude.toFixed(6) + ', ' +
+        pos.coords.longitude.toFixed(6);
+    }, () => {
+      document.getElementById('gps-coords').placeholder =
+        'Location access denied';
+    });
+
+    // Handle form submission…
+    document.getElementById('proof-form').addEventListener('submit', e => {
+      e.preventDefault();
+      // Upload logic here
+      alert('Proof submitted!');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildpay X - New claim</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="#"><img style=" width: 200px;height: 70px;" src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item ">
+                            <a href="materialSupplier.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-title">Pages</li>
+
+                        
+
+                        <li class="sidebar-item active has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                    <use
+                                        xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#bookmark-fill" />
+                                </svg>
+                                <span>Manage Claims</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="ms-form.html">Submit new claim</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="ms-claims.html">Claim Status</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="ms-noti.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#chat-right-text-fill" />
+                                            </svg>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ms-profile.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#person-circle" />
+                                            </svg>
+                                <span>Profile Settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="contact.html" class='sidebar-link'>
+                                <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#file-earmark-diff-fill" />
+                                            </svg>
+                                <span>Contact us</span>
+                            </a>
+                        </li>
+
+                        
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>Submit a new Claim</h3>
+                            <p class="text-subtitle text-muted">Upload Purchase order along with the other documents to get started</p>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Manage Claims</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Submit New claim</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basic Horizontal form layout section start -->
+<section id="submit-new-claim">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Submit New Claim</h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <form id="new-claim-form">
+
+              <!-- Upload Purchase Order -->
+              <div class="mb-3">
+                <label for="po-upload" class="form-label">Upload Purchase Order</label>
+                <div class="input-group">
+                    <label class="input-group-text" for="po-upload">
+                    <i class="bi bi-file-earmark-arrow-up"></i>
+                    </label>
+                    <input
+                    type="file"
+                    class="form-control"
+                    id="po-upload"
+                    accept=".pdf,.jpg,.png">
+                </div>
+            </div>
+
+              <!-- Project Name -->
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-building"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="project-name"
+                  placeholder="Project name">
+              </div>
+
+              <!-- Claim Amount -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">A$</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="claim-amount"
+                  placeholder="Claim amount">
+                <span class="input-group-text">.00</span>
+              </div>
+
+              <!-- Delivery Date -->
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="delivery-date">
+              </div>
+
+              <!-- EarlyPay Toggle + T&C note -->
+              <div class="mb-3">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="earlypay-toggle"
+                    checked>
+                  <label
+                    class="form-check-label"
+                    for="earlypay-toggle">
+                    Request EarlyPay advance (85%)
+                  </label>
+                </div>
+                <!-- small T&C text -->
+                <small class="text-muted">
+                  * EarlyPay subject to approval &amp; 1.5% fee. Terms &amp; Conditions apply.
+                </small>
+              </div>
+
+              <!-- Additional Documents -->
+              <div class="input-group mb-4">
+                <label class="input-group-text" for="additional-docs">
+                  <i class="bi bi-paperclip"></i>
+                </label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="additional-docs"
+                  multiple
+                  accept=".pdf,.jpg,.png">
+                <span class="input-group-text">Additional Documents</span>
+              </div>
+
+              <!-- Remarks -->
+              <div class="input-group mb-4">
+                <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+                <textarea
+                  class="form-control"
+                  id="claim-remarks"
+                  rows="3"
+                  placeholder="Any additional notes…"></textarea>
+              </div>
+
+              <!-- Submit / Reset Buttons -->
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary me-2">
+                  Submit Claim
+                </button>
+                <button type="reset" class="btn btn-light-secondary">
+                  Reset
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+            </div>
+
+            
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
